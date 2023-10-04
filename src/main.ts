@@ -123,8 +123,11 @@ const employee2: EmployeeType = {
 }
 
 // Generics
-const filter = (arr: number[], filterFunction: (num: number) => boolean) => {
+const filter = <T>(arr: T[], filterFunction: (num: T) => boolean): T[] => {
   return arr.filter(filterFunction)
 }
 
 const evenNumbers = filter(numbers, (num) => num % 2 == 0);
+
+const words = ["snake", "sausage", "gareth", "cabbage"];
+const wordsStartingWithS = filter(words, (word) => word[0] == "s");
