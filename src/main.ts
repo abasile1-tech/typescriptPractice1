@@ -63,3 +63,61 @@ const rateLesson = (lessonId: string | number, rating: Rating): void => {
 
 rateLesson("TypeScript", 5);
 
+// Objects
+type LoginType = {
+  username: string;
+  password: string;
+}
+
+type UserType = {
+  username: string;
+  password: string;
+  age: number;
+}
+
+const login = (details: LoginType): void => {
+  console.log(`You logged in as ${details.username}`);
+}
+
+const user: UserType = {
+  username: "typescriptlover99", 
+  password: "123", 
+  age:12
+};
+
+login(user);
+
+// Interfaces
+interface IUser {
+  username: string;
+  password: string;
+  age: number;
+}
+
+const user2: IUser = {
+  username: "jacksparrow",
+  password: "arrrrrrr",
+  age: 21
+}
+
+interface IEmployee extends IUser {
+  employee_id: string;
+}
+
+const employee: IEmployee = {
+  employee_id: "Alpha47",
+  username: "bigboy",
+  password: "yeeeeeeaaaaa",
+  age: 29
+}
+
+type EmployeeType = UserType & {
+  employee_id: string;
+}
+
+const employee2: EmployeeType = {
+  username: "bab",
+  password: "ha",
+  age: 37,
+  employee_id: "3999"
+}
