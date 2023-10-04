@@ -121,3 +121,10 @@ const employee2: EmployeeType = {
   age: 37,
   employee_id: "3999"
 }
+
+// Generics
+const filter = (arr: number[], filterFunction: (num: number) => boolean) => {
+  return arr.filter(filterFunction)
+}
+
+const evenNumbers = filter(numbers, (num) => num % 2 == 0);
