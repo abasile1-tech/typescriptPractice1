@@ -131,3 +131,13 @@ const evenNumbers = filter(numbers, (num) => num % 2 == 0);
 
 const words = ["snake", "sausage", "gareth", "cabbage"];
 const wordsStartingWithS = filter(words, (word) => word[0] == "s");
+
+interface Pair<T, U> {
+  first: T;
+  second: U;
+}
+
+const pairObj: Pair<string,string> = {
+  first: "hello",
+  second: "world"
+}
